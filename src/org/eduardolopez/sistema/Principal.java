@@ -9,15 +9,31 @@ import java.util.Date;
 import org.eduardolopez.bean.Book;
 import org.eduardolopez.exception.ValidarException;
 import org.eduardolopez.util.ManejadorDeArchivos;
+import org.eduardolopez.interfaces.OnClickListener;
 
 /**
  *
  * @author programacion
  */
 public class Principal {
-
+    
     public static void main(String args[]) {
-        try {
+        
+        OnClickListener onClickListener = new OnClickListener() {
+            
+            @Override
+            public void onClick(String mensaje) {
+                System.out.println("Un : " + mensaje);
+            }
+        };
+        
+        onClickListener.onClick("Click en el panel de control");
+        
+        OnClickListener onClickListenerLambda = (String mensaje) -> {
+            System.out.println("Un: " + mensaje);
+        };
+        onClickListenerLambda.onClick("Click derecho en el escritorio de windows");
+        /* try {
             String authors[] = {"Juan Perez", "Julio Martinez"};
             Book lista[] = new Book[5];
             lista[0] = new Book("Book1", new Date(), "Editorial 1", authors);
@@ -31,15 +47,20 @@ public class Principal {
             lista[3].setIsbn("4444");
             lista[4].setIsbn("5555");
             
-            imprimirLibros(lista);
+            imprimirLibros(lista); 
             guardarInformacion(lista);
-        } catch (ValidarException e) {
+            //mostrarInformacion("books.txt");
+            int n = 100;
+            int m = 100/2;
+            assert n == m : "Los valores no son iguales";
+            
+        } catch (Exception e) {
             System.out.println("Error:" + e.getMessage());
         }finally{//este siempre se ejecuta exista o no exista una exception o excepsion
         
-        }
-    }
-
+        }*/
+    }    
+    
     public static void imprimirLibros(Book[] libros) throws ValidarException {
         try {
             for (int i = 0; i < libros.length; i++) {
@@ -50,11 +71,17 @@ public class Principal {
         }
     }
     
-    public static void guardarInformacion(Book[] libros){
+    public static void guardarInformacion(Book[] libros) {
         ManejadorDeArchivos manejador = new ManejadorDeArchivos("books.txt");
-        for(int i = 0; i < libros.length; i++){
+        for (int i = 0; i < libros.length; i++) {
             manejador.escribir(libros[i].toString());
-        
+            
         }
     }
+
+    public static void mostrarInformacion(String archivo) {
+        ManejadorDeArchivos manejador = new ManejadorDeArchivos(archivo);
+        System.out.println(manejador.leer(archivo));
+    }
+    
 }

@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/programacion/Documents/StoreOline/src/org/eduardolopez/interfaces/IVisualizable.java</file>
-            <file>file:/C:/Users/programacion/Documents/StoreOline/src/org/eduardolopez/util/ManejadorDeArchivos.java</file>
-            <file>file:/C:/Users/programacion/Documents/StoreOline/src/org/eduardolopez/bean/Book.java</file>
-            <file>file:/C:/Users/programacion/Documents/StoreOline/src/org/eduardolopez/bean/Magazine.java</file>
-            <file>file:/C:/Users/programacion/Documents/StoreOline/src/org/eduardolopez/exception/ValidarException.java</file>
-            <file>file:/C:/Users/programacion/Documents/StoreOline/src/org/eduardolopez/bean/Publication.java</file>
-            <file>file:/C:/Users/programacion/Documents/StoreOline/src/org/eduardolopez/sistema/Principal.java</file>
+            <file>file:/C:/Users/programacion/Documents/Storeoline_java/src/org/eduardolopez/util/ManejadorDeArchivos.java</file>
+            <file>file:/C:/Users/programacion/Documents/Storeoline_java/src/org/eduardolopez/interfaces/OnClickListener.java</file>
+            <file>file:/C:/Users/programacion/Documents/Storeoline_java/src/org/eduardolopez/sistema/Principal.java</file>
         </group>
     </open-files>
 </project-private>
